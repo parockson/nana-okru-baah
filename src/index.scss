@@ -1,0 +1,70 @@
+// ==========================================
+// THEME VARIABLES & PALETTE
+// ==========================================
+$color-bg-dark: #0b0b0b;
+$color-bg-obsidian: #000000;
+$color-crimson-deep: #4a0a0a;
+$color-crimson-bright: #8a1414;
+$color-crimson-gradient: #3a0505;
+$color-gold-royal: #d4af37;
+$color-text-white: #ffffff;
+$color-text-muted: #a3a3a3;
+
+// ==========================================
+// TAILWIND CORE DIRECTIVES
+// ==========================================
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// ==========================================
+// CUSTOM BROCHURE PRINT PRINT LAYOUTS
+// ==========================================
+.brochure-canvas {
+  width: 210mm;
+  background-color: $color-bg-obsidian;
+  color: $color-text-white;
+}
+
+.a4-page {
+  width: 210mm;
+  height: 297mm;
+  position: relative;
+  overflow: hidden;
+  background-color: $color-bg-dark;
+  
+  // Clean handling of hard cuts during document compilation
+  page-break-after: always;
+  break-after: page;
+}
+
+.side-adinkra-trim {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15mm;
+  height: 100%;
+  background: linear-gradient(to bottom, $color-crimson-bright, $color-crimson-gradient);
+  border-right: 2px solid $color-gold-royal;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20mm;
+  gap: 3rem;
+  color: rgba($color-gold-royal, 0.7);
+  font-size: 1.5rem;
+}
+
+// Target adjustments specifically during PDF compilation engine run
+@media print {
+  body {
+    background: transparent;
+  }
+  .a4-page {
+    page-break-after: always;
+    break-after: page;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
