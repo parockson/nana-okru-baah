@@ -1,9 +1,9 @@
-// ─── Cover ────────────────────────────────────────────────────────────────────
+// ─── Cover Metadata ──────────────────────────────────────────────────────────
 export const cover = {
-  heading:   'CELEBRATION OF LIFE & LEGACY',
-  fullName:  'Nana Okru-Baah V',
-  privateName: 'Felix  Aidoo-Rockson',
-  epithet:   'Odikro of Gomoa Achiase',
+  heading: 'CELEBRATION OF LIFE & LEGACY',
+  fullName: 'Nana Okru-Baah V',
+  privateName: 'Felix Aidoo-Rockson',
+  epithet: 'Odikro of Gomoa Achiase',
   birthDate: '31st March 1952',
   deathDate: '29th November 2020',
   serviceDate: '27th June 2026',
@@ -11,44 +11,49 @@ export const cover = {
   serviceVenue: 'Gomoa Achiase, Central Region, Ghana',
 };
 
-// ─── Order of Service ─────────────────────────────────────────────────────────
+// ─── Order of Service Timeline ───────────────────────────────────────────────
 export const orderOfService = [
-  { time: '8:30 AM', title: 'Gathering & Reception of Mourners',       presenter: 'Ushers' },
-  { time: '9:00 AM', title: 'Opening Prayer & Processional Hymn',      presenter: 'Rev. Isaac Mensah' },
-  { time: '9:30 AM', title: 'Scripture Reading',                        presenter: 'Family Representative' },
-  { time: '10:00 AM', title: 'Tributes & Eulogies',                    presenter: 'Children, Nananom & Friends' },
-  { time: '11:00 AM', title: 'Sermon / Homily',                        presenter: 'Pastor Emmanuel' },
+  { time: '8:30 AM',  title: 'Gathering & Reception of Mourners',       presenter: 'Ushers' },
+  { time: '9:00 AM',  title: 'Opening Prayer & Processional Hymn',      presenter: 'Rev. Isaac Mensah' },
+  { time: '9:30 AM',  title: 'Scripture Reading',                       presenter: 'Family Representative' },
+  { time: '10:00 AM', title: 'Tributes & Eulogies',                     presenter: 'Children, Nananom & Friends' },
+  { time: '11:00 AM', title: 'Sermon / Homily',                         presenter: 'Pastor Emmanuel' },
   { time: '11:45 AM', title: 'Thanksgiving Offering',                   presenter: 'Finance Committee' },
   { time: '12:00 PM', title: 'Vote of Thanks',                          presenter: 'Family Head' },
   { time: '12:15 PM', title: 'Final Commendation & Benediction',        presenter: 'Chiefs & Elders Council' },
-  { time: '1:00 PM',  title: 'Interment at Achiase Family Cemetery',   presenter: '' },
-  { time: '3:00 PM',  title: 'Reception at Achiase Palace Grounds',    presenter: '' },
+  { time: '1:00 PM',  title: 'Interment at Achiase Family Cemetery',    presenter: '' },
+  { time: '3:00 PM',  title: 'Reception at Achiase Palace Grounds',     presenter: '' },
 ];
 
-// ─── Biography ────────────────────────────────────────────────────────────────
-export const biography = `Nana Okru-Baah V, born Felix Aidoo Rockson on the 31st of March 1952, was a man of extraordinary character, unwavering principle, and devoted service — both to his family and to his community.
+// ─── Biography Narrative ─────────────────────────────────────────────────────
+export const biography = `Nana Okru Baah V, known in private life as Felix Aidoo-Rockson, was born on 31st March 1952 at Gomoa Achiase to Nana Nguando (Odikro of Gomoa Nkrozan) and Obaapanyi Adjoa Nkwodweba of Gomoa Achiase, from the Royal Asebu Twidan family. He was the second child born to his parents and the last of six children born to his mother.
 
-Raised in the traditions of his forefathers in Gomoa Achiase, Central Region, Ghana, Nana Okru-Baah V grew up with a deep sense of duty and cultural pride. From an early age, he demonstrated the leadership qualities and the humility that would define his life's work.
+He began his basic education at Gomoa Achiase L/A Primary Basic School and continued his studies at the Commercial Business School in Agona Swedru, where he distinguished himself in Accounting and Management. His early years clearly showed signs of the deep wisdom and humility he would later bring to the royal stool.
 
-He was enstooled as the traditional ruler and Odikro of Gomoa Achiase, a position he held with exceptional dignity, wisdom, and dedication for over four decades. Under his stewardship, he championed community development, the preservation of Ghanaian heritage and tradition, and the promotion of unity among his people. He was known as a fair and compassionate leader who listened to the concerns of his subjects and worked tirelessly to resolve disputes and foster peace.
+Before ascending the stool, Nana worked diligently with Total Ghana, rising to the position of station manager at Nkawkaw. He was subsequently transferred to the Tema Main Harbour, then to the Tema Fishing Harbour, and finally to Accra Newtown, where he retired in 2017 due to ill health. He was widely known among colleagues for his strict discipline, absolute fairness, and hardworking nature.
 
-Beyond his role as a chief, Nana was a deeply devoted husband, father, grandfather, and great-grandfather. In 1980, he met the love of his life, and in 1985, the two were joined in holy matrimony, beginning a beautiful journey together that spanned 35 wonderful years. Their union bore 14 children, and through the generations that followed, Nana Okru-Baah V saw his family grow into a vibrant and loving community of its own.
+Upon the passing of his predecessor, Nana Okru Ampiaa IV, he was nominated and duly enstooled as Nana Okru Baah V, Odikro of Gomoa Achiase, under the Gomoa Ajumako Traditional Area. He solemnly swore the traditional oath of allegiance to Omanhen Otupon of the Gomoa Ajumako Traditional Council.
 
-He was known for his generosity, his warmth, and his infectious sense of humor. He had the remarkable ability to make everyone around him feel seen, valued, and cared for. Whether at the palace or at home, he always made time for those who needed him.
+Nana's years on the ancestral stool were marked by profound achievements:
+1. Peace & Unity: He peacefully settled major land and family disputes within the jurisdiction without requiring external court intervention.
+2. Development: He successfully lobbied for the advancement of the Achiase Methodist Basic School, the extension of electricity infrastructure, and the construction of the Gomoa Achiase Community Durbar grounds.
+3. Culture: He beautifully revived the historic Gomoa Achiase Akwambo festival.
 
-After a period of illness borne with great bravery and quiet dignity, Nana Okru-Baah V peacefully transitioned on the 29th of November 2020 at the Kasoa Polyclinic. He leaves behind a legacy that will endure through the generations — a legacy of love, leadership, sacrifice, and an unshakeable faith in God.
+Nana was survived by his wife, Madam Emma Arthur, and fourteen children, though he naturally stepped into the role of a loving father to many other children within the community.
 
-He is gone, but never forgotten. His memory lives on in every heart he touched.`;
+After a brief illness, Nana Okru Baah V peacefully joined his ancestors on 29th November 2020 at the Kasoa Polyclinic at the age of 70. When chiefs are present, the youth have strength. Nana gave Achiase that true strength. His humility, courage, and unconditional love for his people will remain our guiding light.
+
+Daa yie, Ohene pa. Your stool will have a worthy successor. Da yie, Da yie Nana.`;
 
 // ─── Widow's Tribute ──────────────────────────────────────────────────────────
 export const widowTribute = {
-  title:    'Tribute to My Beloved Husband',
+  title: 'Tribute to My Beloved Husband',
   subtitle: 'Romans 14 : 7 – 8',
   scripture: '7. For none of us lives for ourselves alone, and none of us dies for ourselves alone. 8. If we live, we live for the Lord; and if we die, we die for the Lord. So, whether we live or die, we belong to the Lord.',
   signatory: 'Madam Emma Arthur',
-  signoff:  'Your Loving Wife',
+  signoff: 'Your Loving Wife',
   body: `My beloved husband, words can never fully express the depth of my love for you or the pain of your absence.
-
+  
 We met in 1980 and began a beautiful journey together. In 1985, we embarked on a marriage that lasted 35 wonderful years. Through every season of life, you remained my partner, my confidant, my strength, and my greatest blessing.
 
 You were a hardworking man who always ensured that your family lacked nothing. No matter the circumstances, you worked tirelessly to provide for us and made sure there was always food on the table. Your dedication, sacrifice, and commitment to your family spoke volumes about the kind of man you were.
@@ -65,15 +70,14 @@ Rest peacefully, my dear husband. Until we meet again, I will hold onto the memo
 
 Forever loved, forever remembered, and forever missed.
 
-May the Almighty God keep you in the bosom of Abraham.
-Fare thee well.`,
+May the Almighty God keep you in the bosom of Abraham. Fare thee well.`,
 };
 
 // ─── Children's Tribute ───────────────────────────────────────────────────────
 export const childrenTribute = {
-  title:    'Tribute by the Children',
+  title: 'Tribute by the Children',
   subtitle: 'In Loving Memory of Nana Okru-Baah V',
-  signoff:  'From Your Loving Children',
+  signoff: 'From Your Loving Children',
   children: [
     'Harriet Aidoo-Rockson',
     'Florence Rockson-Kudjoe',
@@ -112,22 +116,16 @@ We promise to uphold the principles you taught us — respect, honesty, hard wor
 
 It hurts to say goodbye, Daddy. Very painful. But we take comfort in knowing that your suffering has ended and that you are finally at peace.
 
-Rest well, Nana Okru-Baah V.
-Rest well, our beloved father.
-Rest well, Felix Aidoo Rockson.
+Rest well, Nana Okru-Baah V. Rest well, our beloved father. Rest well, Felix Aidoo Rockson.
 
-You fought a good fight.
-You carried your burdens with courage.
-You loved your family wholeheartedly.
-
-You will forever remain in our hearts.
+You fought a good fight. You carried your burdens with courage. You loved your family wholeheartedly. You will forever remain in our hearts.
 
 Forever Loved, Forever Missed.`,
 };
 
 // ─── Grandchildren's Tribute ──────────────────────────────────────────────────
 export const grandchildrenTribute = {
-  title:   'Tribute from the Grandchildren',
+  title: 'Tribute from the Grandchildren',
   signoff: 'Your Loving Grandchildren',
   body: `Grandpa, you were more than a title to us. You were the warm laughter that greeted us when we arrived, the storyteller who kept us captivated for hours, and the gentle hand that guided us in the ways of life.
 
@@ -139,14 +137,12 @@ We may not have had enough time with you, but the moments we did share are treas
 
 Grandpa, we will make you proud. We will honor your name. We will live in a way that reflects the values you instilled in this family — love, hard work, respect, and faith in God.
 
-Sleep well, Grandpa. You have earned your rest.
-
-We love you more than words can say.`,
+Sleep well, Grandpa. You have earned your rest. We love you more than words can say.`,
 };
 
-// ─── Great Grandchildren's Tribute ───────────────────────────────────────────
+// ─── Great-Grandchildren's Tribute ───────────────────────────────────────────
 export const greatGrandchildrenTribute = {
-  title:   'Tribute from the Great-Grandchildren',
+  title: 'Tribute from the Great-Grandchildren',
   signoff: 'Your Great-Grandchildren',
   body: `Great-Grandpa, we may have been too young to fully understand what it meant to have you with us, but we know now — and we feel it every day.
 
@@ -159,9 +155,9 @@ Thank you for the foundation you built. Thank you for the love you passed down t
 Rest in perfect peace, Great-Grandpa.`,
 };
 
-// ─── In-laws' Tribute ─────────────────────────────────────────────────────────
+// ─── In-Laws' Tribute ─────────────────────────────────────────────────────────
 export const inlawsTribute = {
-  title:   'Tribute from the In-Laws',
+  title: 'Tribute from the In-Laws',
   signoff: 'Your In-Laws',
   body: `When we joined this family, we quickly understood why our spouses spoke of their father with such reverence. Nana Okru-Baah V was not simply a father-in-law — he was a father in every sense of the word to each of us.
 
@@ -176,7 +172,7 @@ Nana, we thank you for embracing us, for guiding us, and for the example of love
 May your soul rest in the everlasting peace of God.`,
 };
 
-// ─── Program Outline ──────────────────────────────────────────────────────────
+// ─── Weekend Program Outline ──────────────────────────────────────────────────
 export const programOutline = [
   {
     day: 'Saturday, 27th June 2026',
@@ -200,7 +196,7 @@ export const programOutline = [
   },
 ];
 
-// ─── MoMo Support ─────────────────────────────────────────────────────────────
+// ─── Financial Support Details ───────────────────────────────────────────────
 export const momoSupport = {
   heading: 'MoMo Support',
   intro: 'The family of the late Nana Okru-Baah V is grateful for every act of kindness and support during this difficult time. If you wish to contribute to the funeral expenses or send a goodwill offering to the family, you may do so via Mobile Money.',
