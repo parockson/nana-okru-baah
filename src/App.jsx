@@ -56,7 +56,7 @@ function App() {
               <div className="splash-copy">
                 <span className="splash-label">In Loving Memory</span>
                 <h2>Nana Okru-Baah V</h2>
-                <p className="splash-private-name">Felix Kwame Baah Aidoo Rockson</p>
+                <p className="splash-private-name">Felix Aidoo-Rockson</p>
                 <p className="splash-title-line">Odikro of Gomoa Achiase</p>
                 <p className="splash-dates">31st March 1952 — 29th November 2020</p>
                 <button className="splash-enter" onClick={closeSplash}>
@@ -74,7 +74,7 @@ function App() {
           <div className="site-brand">
             <h1 className="site-title">Nana Okru-Baah V</h1>
             <p className="site-subtitle">
-              Odikro of Gomoa Achiase · Memorial Brochure · 28th – 29th May 2026
+              Odikro of Gomoa Achiase · Memorial Brochure · 27th – 28th June 2026
             </p>
           </div>
           <div className="header-controls">
@@ -107,7 +107,7 @@ function App() {
 
       {/* ── Footer ─────────────────────────────────────────────────────────── */}
       <footer className="site-footer">
-        <p>28th – 29th May 2026 · Gomoa Achiase, Central Region, Ghana</p>
+        <p>27th – 28th June 2026 · Gomoa Achiase, Central Region, Ghana</p>
       </footer>
     </div>
   );

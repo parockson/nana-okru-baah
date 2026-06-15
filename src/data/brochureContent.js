@@ -2,12 +2,12 @@
 export const cover = {
   heading:   'A Celebration of Life',
   fullName:  'Nana Okru-Baah V',
-  privateName: 'Felix  Aidoo Rockson',
+  privateName: 'Felix  Aidoo-Rockson',
   epithet:   'Odikro of Gomoa Achiase',
   birthDate: '31st March 1952',
   deathDate: '29th November 2020',
-  serviceDate: '27th une 2026',
-  serviceTime: '8:30 AM Daily',
+  serviceDate: '27th June 2026',
+  serviceTime: '8:30 AM',
   serviceVenue: 'Gomoa Achiase, Central Region, Ghana',
 };
 
@@ -179,7 +179,7 @@ May your soul rest in the everlasting peace of God.`,
 // ─── Program Outline ──────────────────────────────────────────────────────────
 export const programOutline = [
   {
-    day: 'Wednesday, 28th May 2026',
+    day: 'Saturday, 27th June 2026',
     events: [
       { time: '8:00 AM',  desc: 'Arrival & Reception of Dignitaries at Achiase Palace' },
       { time: '9:00 AM',  desc: 'Church Service at Achiase Presbyterian Church' },
@@ -190,7 +190,7 @@ export const programOutline = [
     ],
   },
   {
-    day: 'Thursday, 29th May 2026',
+    day: 'Sunday, 28th June 2026',
     events: [
       { time: '9:00 AM',  desc: 'Thanksgiving Church Service' },
       { time: '11:00 AM', desc: 'Durbar of Chiefs & Elders' },
