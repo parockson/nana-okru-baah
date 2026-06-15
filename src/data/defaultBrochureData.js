@@ -1,21 +1,15 @@
 // Import explicitly from the 'main page' subdirectory
 import defaultPortrait from '../assets/main page/portrait.png';
 
-// 1. Fetch the raw module data without specifying dynamic query injection modifiers in the glob string
+// Configure the glob exactly as demanded by the compiler to silence warnings
 const importImageModules = import.meta.glob('../assets/**/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', { 
-  eager: true 
+  eager: true, 
+  query: '?url',
+  import: 'default'
 });
 
-// 2. Safely parse out the true compiled string URL in both development and production bundles
-const assetUrls = Object.keys(importImageModules)
-  .map((path) => {
-    const module = importImageModules[path];
-    // In production previews, eager modules are wrapped as an object with a default property string path
-    if (module && typeof module === 'object' && 'default' in module) {
-      return module.default;
-    }
-    return module; // Fallback string conversion
-  })
+// Since 'import: default' extracts the asset strings directly, Object.values is already an array of clean URLs
+const assetUrls = Object.values(importImageModules)
   .filter((url) => url !== defaultPortrait); // Avoid duplicating your main portrait in the collage array
 
 // Keep up to 6 unique gallery items for the default collage block
@@ -28,8 +22,8 @@ export const defaultBrochureData = {
   epithet: 'Odikro of Gomoa Achiase',
   birthDate: '31st March 1952',
   deathDate: '29th November 2020',
-  serviceDate: '27th – 28th June 2026',
-  serviceTime: '8:30 AM',
+  serviceDate: '28th – 29th May 2026',
+  serviceTime: '8:30 AM Daily',
   serviceVenue: 'Gomoa Achiase, Central Region, Ghana',
   orderOfService: [
     { id: '1', time: '9:00 AM', title: 'Opening Prayer & Hymn', presenter: 'Rev. Isaac Mensah' },
@@ -56,4 +50,4 @@ export function createOrderItem() {
     title: '',
     presenter: '',
   };
-}
+}e
