@@ -233,9 +233,13 @@ export function BrochureBooklet() {
   return (
     <div className="brochure-booklet-container">
 
-      {/* ── Sheet 1: Cover + Table of Contents ─────────────────────────────── */}
+      {/* ── Sheet 1: Cover (left) ─────────────────────────────────────────── */}
       <div className="a5-sheet" id="cover">
         <PageCover />
+      </div>
+
+      {/* ── Sheet 2: Table of Contents (standalone, two-column) ───────────── */}
+      <div className="a5-sheet toc-sheet" id="table-of-contents">
         <TocColumn />
       </div>
 
@@ -373,11 +377,19 @@ export function BrochureBooklet() {
       {/* ── IX. MoMo Support ──────────────────────────────────────────────── */}
       <BrochureSection id="momo-support" label={momoSupport.heading} number="IX">
         <div className="momo-layout">
-          <img
-            src={supportImg}
-            alt="MoMo Support QR / Payment details"
-            className="momo-qr-image"
-          />
+          <a
+            href="https://korbapay.korba365.com/payments/institution/628?branch"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="momo-qr-link"
+            title="Open Korbapay payment link"
+          >
+            <img
+              src={supportImg}
+              alt="MoMo Support QR / Payment details"
+              className="momo-qr-image"
+            />
+          </a>
           <div className="momo-details">
             <p className="momo-intro">{momoSupport.intro}</p>
             <div className="momo-cards">
@@ -390,6 +402,10 @@ export function BrochureBooklet() {
               ))}
             </div>
             <p className="momo-note">{momoSupport.note}</p>
+            <p className="momo-action">
+              Or use this direct link: {' '}
+              <a href="https://korbapay.korba365.com/payments/institution/628?branch" target="_blank" rel="noopener noreferrer">https://korbapay.korba365.com/payments/institution/628?branch</a>
+            </p>
           </div>
         </div>
       </BrochureSection>

@@ -321,6 +321,26 @@
   flex-shrink: 0;
 }
 
+/* Dedicated TOC sheet: render the list in two columns */
+.a5-sheet.toc-sheet .bp-toc-list {
+  display: block;
+  column-count: 2;
+  column-gap: 1rem;
+  max-height: calc(100% - 3.2rem);
+  padding: 0 0.4rem;
+}
+
+.a5-sheet.toc-sheet .bp-toc-item {
+  display: block;
+  break-inside: avoid;
+  margin-bottom: 0.5rem;
+}
+
+.a5-sheet.toc-sheet .bp-toc-label {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
 .bp-timeline {
   display: flex;
   flex-direction: column;

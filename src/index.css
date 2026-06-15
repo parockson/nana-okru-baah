@@ -2197,6 +2197,27 @@ img { display: block; width: 100%; height: auto; }
   margin: 0;
 }
 
+.momo-qr-link {
+  display: inline-block;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.momo-qr-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.momo-action {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.momo-action a {
+  color: #cc3333;
+  text-decoration: underline;
+}
+
 /* =============================================
    PROGRAM OUTLINE
    ============================================= */
