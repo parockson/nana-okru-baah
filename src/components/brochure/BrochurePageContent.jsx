@@ -15,14 +15,14 @@ import portraitImg from '../../assets/main page/portrait.png';
 import supportImg from '../../assets/main page/support.jpeg';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   Vite glob imports – resolved at build time (must be string literals)
+   Vite glob imports – resolved cleanly at build-time using modern specs
    ───────────────────────────────────────────────────────────────────────────── */
-const galleryRaw  = import.meta.glob('../../assets/Gallery/*.{jpg,jpeg,png,JPG,PNG}',               { eager: true, as: 'url' });
-const childrenRaw = import.meta.glob('../../assets/Children/*.{jpg,jpeg,png,JPG,PNG}',              { eager: true, as: 'url' });
-const wifeRaw     = import.meta.glob('../../assets/Wife/*.{jpg,jpeg,png,JPG,PNG}',                  { eager: true, as: 'url' });
-const grandRaw    = import.meta.glob('../../assets/Grand Children/*.{jpg,jpeg,png,JPG,PNG}',        { eager: true, as: 'url' });
-const greatRaw    = import.meta.glob('../../assets/Great Grand children/*.{jpg,jpeg,png,JPG,PNG}',  { eager: true, as: 'url' });
-const inlawsRaw   = import.meta.glob('../../assets/Inlaws/*.{jpg,jpeg,png,JPG,PNG}',               { eager: true, as: 'url' });
+const galleryRaw  = import.meta.glob('../../assets/Gallery/*.{jpg,jpeg,png,JPG,PNG}',       { eager: true, query: '?url', import: 'default' });
+const childrenRaw = import.meta.glob('../../assets/Children/*.{jpg,jpeg,png,JPG,PNG}',      { eager: true, query: '?url', import: 'default' });
+const wifeRaw     = import.meta.glob('../../assets/Wife/*.{jpg,jpeg,png,JPG,PNG}',          { eager: true, query: '?url', import: 'default' });
+const grandRaw    = import.meta.glob('../../assets/Grand Children/*.{jpg,jpeg,png,JPG,PNG}', { eager: true, query: '?url', import: 'default' });
+const greatRaw    = import.meta.glob('../../assets/Great Grand children/*.{jpg,jpeg,png,JPG,PNG}', { eager: true, query: '?url', import: 'default' });
+const inlawsRaw   = import.meta.glob('../../assets/Inlaws/*.{jpg,jpeg,png,JPG,PNG}',        { eager: true, query: '?url', import: 'default' });
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Image helpers

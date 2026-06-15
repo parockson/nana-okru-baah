@@ -3,14 +3,13 @@ import defaultPortrait from '../assets/main page/portrait.png';
 
 // Configure the glob exactly as demanded by the compiler to silence warnings
 const importImageModules = import.meta.glob('../assets/**/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', { 
-  eager: true, 
-  query: '?url',
-  import: 'default'
+  eager: true
 });
 
 // Since 'import: default' extracts the asset strings directly, Object.values is already an array of clean URLs
 const assetUrls = Object.values(importImageModules)
-  .filter((url) => url !== defaultPortrait); // Avoid duplicating your main portrait in the collage array
+  .map((mod) => mod.default)
+  .filter((url) => url && url !== defaultPortrait);
 
 // Keep up to 6 unique gallery items for the default collage block
 const collageUrls = assetUrls.slice(0, 6);

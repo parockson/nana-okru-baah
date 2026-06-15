@@ -1,6 +1,6 @@
 // ─── Cover ────────────────────────────────────────────────────────────────────
 export const cover = {
-  heading:   'A Celebration of Life',
+  heading:   'CELEBRATION OF LIFE & LEGACY',
   fullName:  'Nana Okru-Baah V',
   privateName: 'Felix  Aidoo-Rockson',
   epithet:   'Odikro of Gomoa Achiase',
