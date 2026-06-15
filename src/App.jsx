@@ -1,142 +1,114 @@
 import React, { useRef, useState } from 'react';
-import BrochurePage from './pages/BrochurePage.jsx';
-import ProgramOutlinePage from './pages/ProgramOutlinePage.jsx';
-import FuneralOutlinePage from './pages/FuneralOutlinePage.jsx';
-import GalleryPage from './pages/GalleryPage.jsx';
-import EventDetailPage from './pages/EventDetailPage.jsx';
-import fortyDaysImage from './assets/forty days.jpeg';
-
-const pageItems = [
-  { id: 'brochure', label: 'Brochure', short: 'Brochure' },
-  { id: 'outline', label: '40 Days Outline', short: '40 Days' },
-  { id: 'funeral', label: 'Funeral Outline', short: 'Funeral' },
-  { id: 'gallery', label: 'Gallery', short: 'Gallery' },
-];
+import html2pdf from 'html2pdf.js';
+import PageShell from './components/PageShell.jsx';
+import { BrochureBooklet } from './components/brochure/BrochurePageContent.jsx';
+import firstImage from './assets/main page/first image.png';
 
 function App() {
-  const brochureRef = useRef(null);
-  const [activePage, setActivePage] = useState('brochure');
-  const [selectedEvent, setSelectedEvent] = useState(null);
-  const [showModal, setShowModal] = useState(true);
-  const [isClosing, setIsClosing] = useState(false);
+  const [splashClosing, setSplashClosing] = useState(false);
+  const [splashGone,    setSplashGone]    = useState(false);
+  const bookletRef = useRef(null);
 
-  const closeModal = () => {
-    setIsClosing(true);
-    window.setTimeout(() => setShowModal(false), 520);
+  const closeSplash = () => {
+    setSplashClosing(true);
+    setTimeout(() => setSplashGone(true), 540);
   };
 
-  const navigate = (pageId) => {
-    setActivePage(pageId);
-    if (pageId !== 'detail') setSelectedEvent(null);
+  const handleDownloadPDF = () => {
+    const element = bookletRef.current;
+    if (!element) return;
+    element.classList.add('is-printing');
+    html2pdf()
+      .from(element)
+      .set({
+        margin: 0,
+        filename: 'Nana_Okru-Baah_V_Memorial_Brochure.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+        jsPDF: { unit: 'mm', format: 'a5', orientation: 'portrait' },
+      })
+      .save()
+      .then(() => element.classList.remove('is-printing'));
   };
-
-  const renderPage = () => {
-    switch (activePage) {
-      case 'outline':
-        return (
-          <ProgramOutlinePage
-            onRowClick={(row) => {
-              setSelectedEvent(row);
-              setActivePage('detail');
-            }}
-          />
-        );
-      case 'funeral':
-        return (
-          <FuneralOutlinePage
-            onRowClick={(row) => {
-              setSelectedEvent(row);
-              setActivePage('detail');
-            }}
-          />
-        );
-      case 'detail':
-        return (
-          <EventDetailPage
-            event={selectedEvent}
-            onBack={() =>
-              setActivePage(
-                selectedEvent?.activities?.includes('Vigil') ||
-                  selectedEvent?.activities?.includes('Funeral') ||
-                  selectedEvent?.activities?.includes('Burial') ||
-                  selectedEvent?.activities?.includes('Prayer')
-                  ? 'funeral'
-                  : 'outline'
-              )
-            }
-          />
-        );
-      case 'gallery':
-        return <GalleryPage />;
-      default:
-        return <BrochurePage ref={brochureRef} />;
-    }
-  };
-
-  const activeNavId = activePage === 'detail'
-    ? (selectedEvent?.activities?.match(/Vigil|Funeral|Burial|Prayer|Wake|Interment/i) ? 'funeral' : 'outline')
-    : activePage;
 
   return (
     <div className="app-root">
-      <header className="site-header">
-        <div className="site-header-inner">
-          <div className="site-brand">
-            <span className="site-eyebrow">In Loving Memory</span>
-            <h1 className="site-title">Nana Okru-Baah V</h1>
-            <p className="site-subtitle">Odikro of Gomoa Achiase · 40 Days & Funeral Program</p>
-          </div>
 
-          <nav className="site-nav" aria-label="Main navigation">
-            {pageItems.map((page) => (
-              <button
-                key={page.id}
-                type="button"
-                onClick={() => navigate(page.id)}
-                className={`nav-tab ${activeNavId === page.id ? 'nav-tab--active' : ''}`}
-                aria-current={activeNavId === page.id ? 'page' : undefined}
-              >
-                <span className="nav-tab-label">{page.label}</span>
-                <span className="nav-tab-short">{page.short}</span>
-              </button>
-            ))}
-          </nav>
-        </div>
-      </header>
-
-      <main className="site-main">
-        <div key={activePage} className="page-transition">
-          {renderPage()}
-        </div>
-      </main>
-
-      <footer className="site-footer">
-        <p>28th – 29th May 2026 · Gomoa Achiase, Central Region, Ghana</p>
-      </footer>
-
-      {showModal && (
-        <div className={`splash-modal ${isClosing ? 'closing' : 'visible'}`} role="dialog" aria-modal="true" aria-labelledby="splash-title">
-          <div className="splash-overlay" onClick={closeModal} />
+      {/* ── Splash modal ───────────────────────────────────────────────────── */}
+      {!splashGone && (
+        <div
+          className={`splash-modal ${splashClosing ? 'closing' : ''}`}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Welcome to the Memorial Brochure"
+        >
+          <div className="splash-overlay" onClick={closeSplash} />
           <div className="splash-panel">
-            <button type="button" className="splash-close" onClick={closeModal} aria-label="Close welcome dialog">
+            <button
+              className="splash-close"
+              onClick={closeSplash}
+              aria-label="Close welcome screen"
+            >
               ×
             </button>
             <div className="splash-content">
-              <img src={fortyDaysImage} alt="40 Days Observation" className="splash-image" />
+              <img src={firstImage} alt="Nana Okru-Baah V" className="splash-image" />
               <div className="splash-copy">
-                <span className="splash-label">40 Days Observation</span>
-                <h2 id="splash-title">Welcome to the Celebration</h2>
-                <p>
-                  Explore the memorial brochure, event schedules, photo gallery, and activity highlights honoring the life of Nana Okru-Baah V.
-                </p>
-                <button type="button" className="splash-enter" onClick={closeModal}>
-                  Enter Program
+                <span className="splash-label">In Loving Memory</span>
+                <h2>Nana Okru-Baah V</h2>
+                <p className="splash-private-name">Felix Kwame Baah Aidoo Rockson</p>
+                <p className="splash-title-line">Odikro of Gomoa Achiase</p>
+                <p className="splash-dates">31st March 1952 — 29th November 2020</p>
+                <button className="splash-enter" onClick={closeSplash}>
+                  View Memorial Brochure →
                 </button>
               </div>
             </div>
           </div>
         </div>
       )}
+
+      {/* ── Site header ────────────────────────────────────────────────────── */}
+      <header className="site-header">
+        <div className="site-header-inner">
+          <div className="site-brand">
+            <h1 className="site-title">Nana Okru-Baah V</h1>
+            <p className="site-subtitle">
+              Odikro of Gomoa Achiase · Memorial Brochure · 28th – 29th May 2026
+            </p>
+          </div>
+          <div className="header-controls">
+            <button
+              type="button"
+              className="control-btn control-btn--primary"
+              onClick={handleDownloadPDF}
+              aria-label="Download memorial brochure as PDF"
+            >
+              ↓ Download PDF
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* ── Main content ───────────────────────────────────────────────────── */}
+      <main className="site-main">
+        <div className="booklet-workspace">
+          <PageShell
+            title="Memorial Brochure"
+            subtitle="Nana Okru-Baah V · Odikro of Gomoa Achiase"
+            compact
+          >
+            <div className="booklet-scroll-frame" ref={bookletRef}>
+              <BrochureBooklet />
+            </div>
+          </PageShell>
+        </div>
+      </main>
+
+      {/* ── Footer ─────────────────────────────────────────────────────────── */}
+      <footer className="site-footer">
+        <p>28th – 29th May 2026 · Gomoa Achiase, Central Region, Ghana</p>
+      </footer>
     </div>
   );
 }
