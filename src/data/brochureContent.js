@@ -2,11 +2,11 @@
 export const cover = {
   heading:   'A Celebration of Life',
   fullName:  'Nana Okru-Baah V',
-  privateName: 'Felix Kwame Baah Aidoo Rockson',
+  privateName: 'Felix  Aidoo Rockson',
   epithet:   'Odikro of Gomoa Achiase',
   birthDate: '31st March 1952',
   deathDate: '29th November 2020',
-  serviceDate: '28th – 29th May 2026',
+  serviceDate: '27th une 2026',
   serviceTime: '8:30 AM Daily',
   serviceVenue: 'Gomoa Achiase, Central Region, Ghana',
 };
@@ -26,7 +26,7 @@ export const orderOfService = [
 ];
 
 // ─── Biography ────────────────────────────────────────────────────────────────
-export const biography = `Nana Okru-Baah V, born Felix Kwame Baah Aidoo Rockson on the 31st of March 1952, was a man of extraordinary character, unwavering principle, and devoted service — both to his family and to his community.
+export const biography = `Nana Okru-Baah V, born Felix Aidoo Rockson on the 31st of March 1952, was a man of extraordinary character, unwavering principle, and devoted service — both to his family and to his community.
 
 Raised in the traditions of his forefathers in Gomoa Achiase, Central Region, Ghana, Nana Okru-Baah V grew up with a deep sense of duty and cultural pride. From an early age, he demonstrated the leadership qualities and the humility that would define his life's work.
 
@@ -75,20 +75,20 @@ export const childrenTribute = {
   subtitle: 'In Loving Memory of Nana Okru-Baah V',
   signoff:  'From Your Loving Children',
   children: [
-    '1. Harriet Aidoo-Rockson',
-    '2. Florence Rockson-Kudjoe',
-    '3. Samuel Tofah Rockson',
-    '4. Alexander Yaw Rockson',
-    '5. Stella Rockson',
-    '6. Ato Kwamena Rockson',
-    '7. Rosemond Araba Rockson',
-    '8. Regina Aidoo-Rockson',
-    '9. Gifty Rockson',
-    '10. Rita Dekua Rockson',
-    '11. Prince Acquah Rockson',
-    '12. Daniel Djan Rockson',
-    '13. Dennis Djan Rockson',
-    '14. Richmond Rockson',
+    'Harriet Aidoo-Rockson',
+    'Florence Rockson-Kudjoe',
+    'Samuel Tofah Rockson',
+    'Alexander Yaw Rockson',
+    'Stella Rockson',
+    'Ato Kwamena Rockson',
+    'Rosemond Araba Rockson',
+    'Regina Aidoo-Rockson',
+    'Gifty Rockson',
+    'Rita Dekua Rockson',
+    'Prince Acquah Rockson',
+    'Daniel Djan Rockson',
+    'Dennis Djan Rockson',
+    'Richmond Rockson',
   ],
   body: `There are some pains words can never truly explain, and there are some losses the heart may never fully recover from. Today, we stand before family, friends, and loved ones with broken hearts to pay tribute to our beloved father, Nana Okru-Baah V, known in private life as Felix Kwame Baah Aidoo Rockson.
 
@@ -205,9 +205,7 @@ export const momoSupport = {
   heading: 'MoMo Support',
   intro: 'The family of the late Nana Okru-Baah V is grateful for every act of kindness and support during this difficult time. If you wish to contribute to the funeral expenses or send a goodwill offering to the family, you may do so via Mobile Money.',
   accounts: [
-    { network: 'MTN MoMo', name: 'Rockson Family Fund', number: '024 XXX XXXX' },
-    { network: 'Vodafone Cash', name: 'Rockson Family Fund', number: '050 XXX XXXX' },
-    { network: 'AirtelTigo Money', name: 'Rockson Family Fund', number: '027 XXX XXXX' },
+    { network: 'KORBAPAY', name: 'Nana Okru Baah (V) Contribution', link: 'https://korbapay.korba365.com/payments/institution/628?branch' },
   ],
-  note: 'Please use the name "Nana Okru-Baah V Memorial" as your reference when sending. The family thanks you from the bottom of their hearts.',
+  note: 'Please use your name as your reference when sending. The family thanks you from the bottom of their hearts.',
 };

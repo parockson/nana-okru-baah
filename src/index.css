@@ -2082,140 +2082,185 @@ img { display: block; width: 100%; height: auto; }
 .toc-label { line-height: 1.3; }
 
 /* =============================================
-   COVER PAGE ADDITIONS
+   FULL-BLEED COVER PAGE
    ============================================= */
-.bp-private-name {
-  font-size: 0.7rem;
-  font-style: italic;
-  color: #6b5340;
-  margin-top: -0.15rem;
-  margin-bottom: 0.5rem;
+.cover-page {
+  position: relative;
+  width: 100%;
+  max-width: 210mm;
+  margin: 0 auto;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 2px solid rgba(218,165,32,0.5);
+  box-shadow:
+    0 0 0 3px rgba(0,0,0,0.9),
+    0 0 0 5px rgba(218,165,32,0.25),
+    0 20px 60px rgba(0,0,0,0.7);
+  aspect-ratio: 3 / 4;
+  min-height: 450px;
 }
 
-.portrait-placeholder-text {
-  font-family: var(--font-display);
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: #d7c58a;
+.cover-portrait-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
-.portrait-placeholder-sub {
-  font-size: 0.58rem;
-  color: rgba(215,197,138,0.55);
-  display: block;
-  margin-top: 0.2rem;
-  font-style: italic;
-}
-
-/* =============================================
-   MOMO SUPPORT SECTION
-   ============================================= */
-.momo-layout {
+.cover-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg,
+      rgba(0,0,0,0.7) 0%,
+      rgba(0,0,0,0.05) 30%,
+      rgba(0,0,0,0.05) 50%,
+      rgba(0,0,0,0.65) 75%,
+      rgba(0,0,0,0.92) 100%);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.cover-top {
   text-align: center;
 }
 
-@media (min-width: 520px) {
-  .momo-layout {
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-  }
+.cover-ornament {
+  font-size: 0.9rem;
+  color: var(--gold-light);
+  letter-spacing: 0.4em;
+  margin: 0 0 0.2rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
-.momo-qr-image {
-  width: 100%;
-  max-width: 210px;
-  border-radius: 8px;
-  border: 2px solid rgba(218,165,32,0.3);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  flex-shrink: 0;
-}
-
-.momo-details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  flex: 1;
-}
-
-.momo-intro {
-  font-size: 0.82rem;
-  color: #2a1810;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.momo-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-}
-
-.momo-card {
-  background: rgba(255,255,255,0.6);
-  border: 1px solid rgba(218,165,32,0.3);
-  border-radius: 6px;
-  padding: 0.65rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.12rem;
-}
-
-.momo-network {
+.cover-eyebrow {
   font-family: var(--font-display);
-  font-size: 0.62rem;
-  font-weight: 700;
-  color: #8b2121;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.momo-name {
-  font-size: 0.76rem;
-  color: #2a1810;
-  font-weight: 600;
-}
-
-.momo-number {
-  font-family: var(--font-ui);
-  font-size: 0.92rem;
+  color: var(--gold-light);
   font-weight: 700;
-  color: #cc3333;
-  letter-spacing: 0.04em;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
-.momo-note {
+.cover-bottom {
+  text-align: center;
+}
+
+.cover-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  font-weight: 900;
+  color: var(--gold-light);
+  line-height: 1.1;
+  margin: 0 0 0.3rem;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.8);
+}
+
+.cover-epithet {
   font-style: italic;
-  font-size: 0.74rem;
-  color: #6b5340;
-  line-height: 1.5;
+  font-size: 0.88rem;
+  color: #f0e0b0;
+  margin: 0 0 0.15rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.cover-private-name {
+  font-size: 0.72rem;
+  font-style: italic;
+  color: rgba(240,224,176,0.7);
+  margin: 0 0 0.5rem;
+}
+
+.cover-dates {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--fire);
+  margin: 0 0 0.7rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.cover-service {
+  border-top: 1px solid rgba(218,165,32,0.4);
+  padding-top: 0.55rem;
+}
+
+.cover-venue {
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
   margin: 0;
 }
 
-.momo-qr-link {
-  display: inline-block;
-  border-radius: 8px;
+.cover-service-date {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin: 0.1rem 0 0;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* =============================================
+   MOMO SUPPORT — SIMPLE (image + link)
+   ============================================= */
+.momo-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.5rem 0;
+}
+
+.momo-image-link {
+  display: block;
+  border-radius: 10px;
   overflow: hidden;
+  border: 2px solid rgba(218,165,32,0.4);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  max-width: 360px;
+  width: 100%;
 }
 
-.momo-qr-link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+.momo-image-link:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 14px 40px rgba(218,165,32,0.2);
 }
 
-.momo-action {
-  margin-top: 0.5rem;
-  font-size: 0.82rem;
+.momo-hero-image {
+  width: 100%;
+  display: block;
 }
 
-.momo-action a {
-  color: #cc3333;
-  text-decoration: underline;
+.momo-pay-btn {
+  display: inline-block;
+  background: linear-gradient(100deg, #b8860b 0%, #ffd700 50%, #e74c3c 100%);
+  color: #0a0501;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(218,165,32,0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.momo-pay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(218,165,32,0.45);
 }
 
 /* =============================================
