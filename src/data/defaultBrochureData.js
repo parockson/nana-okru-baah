@@ -28,8 +28,8 @@ export const defaultBrochureData = {
   epithet: 'Odikro of Gomoa Achiase',
   birthDate: '31st March 1952',
   deathDate: '29th November 2020',
-  serviceDate: '28th – 29th May 2026',
-  serviceTime: '8:30 AM Daily',
+  serviceDate: '27th – 28th June 2026',
+  serviceTime: '8:30 AM',
   serviceVenue: 'Gomoa Achiase, Central Region, Ghana',
   orderOfService: [
     { id: '1', time: '9:00 AM', title: 'Opening Prayer & Hymn', presenter: 'Rev. Isaac Mensah' },
