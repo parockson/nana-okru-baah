@@ -126,18 +126,26 @@ Forever Loved, Forever Missed.`,
 // ─── Grandchildren's Tribute ──────────────────────────────────────────────────
 export const grandchildrenTribute = {
   title: 'Tribute from the Grandchildren',
+  subtitle: '1 Thessalonians 4:14',
+  scripture: 'For since we believe that Jesus died and rose again, even so, through Jesus, God will bring with him those who have fallen asleep.',
   signoff: 'Your Loving Grandchildren',
-  body: `Grandpa, you were more than a title to us. You were the warm laughter that greeted us when we arrived, the storyteller who kept us captivated for hours, and the gentle hand that guided us in the ways of life.
+  body: `Our dear Grandpa, "Nana, ohene pa, owura a ne bo dwo na ne nyansa yɛ duru." You were the pillar of our family, the light that guided us through dark days. 
 
-Though many of us were young when you were with us, your presence left an indelible impression on our hearts. We saw in you a man of great dignity — a man who walked with purpose and led with love.
+Grandpa, you were more than a title to us. You were the warm laughter that greeted us when we arrived, the storyteller who kept us captivated for hours, and the gentle hand that guided us in the ways of life. Your reign was not of power, but of service. With every word of counsel, you steered us away from harm. With every warm embrace, you reminded us we were safe. With every laugh, you filled our house with life. 
 
-We watched our parents look up to you, and that told us everything we needed to know. You were the pillar that held this family together. You were the root from which all of us grew.
+"Nana, w’adwuma pa ɛda yɛn adwene mu daa." Though you have gone to be with the Lord, your name and your good deeds will forever remain in our hearts. We firmly believe that God will bring with Jesus those who have fallen asleep in him. 
 
-We may not have had enough time with you, but the moments we did share are treasures we will carry forever. Your stories, your wisdom, your jokes, and your unconditional love are gifts that no time can take away.
+Our beloved Grandpa, a shining star in our family's firmament, has left us to ascend to the heavens. With a reign spanning many years, he ruled our lives with kindness, compassion, and strength. "Wokasa a yɛnya anidasoɔ wɔ mu." Your wise counsel guided us through life's storms, your warm embrace comforted us in times of need, and your infectious laughter filled our lives with joy.
 
-Grandpa, we will make you proud. We will honor your name. We will live in a way that reflects the values you instilled in this family — love, hard work, respect, and faith in God.
+Though many of us were young when you were with us, your presence left an indelible impression on our hearts. We saw in you a man of great dignity — a man who walked with purpose and led with love. We watched our parents look up to you, and that told us everything we needed to know. You were the root from which all of us grew. We may not have had enough time with you, but the moments we did share are treasures we will carry forever.
 
-Sleep well, Grandpa. You have earned your rest. We love you more than words can say.`,
+Grandpa's legacy is not just the memories we hold dear, but the values he instilled in us: integrity, resilience, and love. He taught us to stand tall, to stand strong, and to stand together. We promise to make you proud. We will honor your name. We will live in a way that reflects the values you instilled in this family.
+
+As we bid you farewell, we honor your life, your leadership, and your unwavering dedication to our family. We will miss you dearly, but we will continue to draw strength from your wisdom, comfort from your love, and inspiration from your remarkable life.
+
+Sleep well, Grandpa. You have earned your rest. We love you more than words can say.
+
+Farewell, noble Grandpa. Your kingdom may be gone, but your reign in our hearts will never end.`,
 };
 
 // ─── Great-Grandchildren's Tribute ───────────────────────────────────────────
@@ -159,17 +167,18 @@ Rest in perfect peace, Great-Grandpa.`,
 export const inlawsTribute = {
   title: 'Tribute from the In-Laws',
   signoff: 'Your In-Laws',
-  body: `When we joined this family, we quickly understood why our spouses spoke of their father with such reverence. Nana Okru-Baah V was not simply a father-in-law — he was a father in every sense of the word to each of us.
+  body: `We, the in-laws of the late Nana Okru-Baah V, are deeply honored to pay this tribute to a remarkable man whose life touched so many people.
+Today, we gather with heavy hearts to bid farewell to a loving father, grandfather, brother, friend, and father-in-law. Though words cannot fully express the pain of losing such a cherished person, they can help us celebrate a life well lived.
+He welcomed us into his family with warmth, kindness, and genuine love. From the very first day we became part of his family, he treated us not as outsiders but as his own children. His wisdom, humility, and sense of responsibility made him a pillar upon whom many depended.
+He was a man of integrity whose actions spoke louder than words. He taught us the importance of hard work, honesty, respect, and family unity. Through his example, he showed us how to live a life of dignity and purpose.
 
-He welcomed us with open arms, never making us feel like outsiders. He treated us with the same warmth, respect, and care that he showed his own children. In doing so, he truly made us part of this great family.
+He rejoiced in the successes of his children and in-laws and shared in their burdens during difficult times. As a husband and father, he demonstrated unwavering love and commitment to his family.
+His devotion to ensuring the welfare and progress of his loved ones will remain a lasting legacy for generations to come.
+Though we mourn his passing, we are grateful to God for the gift of his life and for the many wonderful memories we shared with him. We take comfort in knowing that his good works, values, and lessons will continue to guide us. Papa, your departure has left a void that can never truly be filled. Yet your memory will forever remain in our hearts. We shall remember your kindness, your laughter, your counsel, and the love you generously shared with all who knew you.
+On behalf of all your in-laws, we express our heartfelt gratitude for the privilege of knowing and being part of your family. We pray that the Almighty grants you eternal rest and grants the family the strength and comfort to bear this great loss.
 
-We marveled at his wisdom, his patience, and his boundless generosity. He had a way of making every person feel valued and important. His home was always open, his table always full, and his heart always ready to receive.
-
-We grieve alongside our spouses and the entire Rockson family. We share in this loss, for he was our father too.
-
-Nana, we thank you for embracing us, for guiding us, and for the example of love and leadership you set before us. We will miss you deeply.
-
-May your soul rest in the everlasting peace of God.`,
+Though we mourn his passing, we hold firmly to the promise of our Lord Jesus Christ in John 11:25: "I am the resurrection and the life; he who believes in Me, though he may die, yet shall he live."
+May his memory remain blessed among us, and may his soul rest in perfect peace until the resurrection morning. Amen`,
 };
 
 // ─── Weekend Program Outline ──────────────────────────────────────────────────
@@ -199,7 +208,7 @@ export const programOutline = [
 // ─── Financial Support Details ───────────────────────────────────────────────
 export const momoSupport = {
   heading: 'MoMo Support',
-  intro: 'The family of the late Nana Okru-Baah V is grateful for every act of kindness and support during this difficult time. If you wish to contribute to the funeral expenses or send a goodwill offering to the family, you may do so via Mobile Money.',
+  intro: 'The family of the late Nana Okru-Baah V is grateful for every act of kindness and support during this difficult time. If you wish to contribute to the funeral or send a goodwill offering to the family, you may do so via our shortcode.',
   accounts: [
     { network: 'KORBAPAY', name: 'Nana Okru Baah (V) Contribution', link: 'https://korbapay.korba365.com/payments/institution/628?branch' },
   ],

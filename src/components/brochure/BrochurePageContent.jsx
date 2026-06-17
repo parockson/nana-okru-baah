@@ -88,7 +88,7 @@ const TOC_ITEMS = [
     sub: [{ id: 'inlaws-photos', label: 'Pictures of In-Laws' }],
   },
   { id: 'gallery',         label: 'Gallery — Nana Okru Baah' },
-  { id: 'momo-support',   label: 'MoMo Support' },
+  { id: 'momo-support',   label: 'Donations and Contributions' },
   { id: 'program-outline', label: 'Program Outline' },
 ];
 
