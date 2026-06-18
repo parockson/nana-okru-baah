@@ -77,7 +77,7 @@ May the Almighty God keep you in the bosom of Abraham. Fare thee well.`,
 export const childrenTribute = {
   title: 'Tribute by the Children',
   subtitle: 'Proverbs 10:7',
-  scripture: 'The memory of the just is blessed, ...',
+  scripture: 'The memory of the just is blessed...',
   signoff: 'From Your Loving Children',
   children: [
     'Harriet Aidoo-Rockson',
@@ -106,6 +106,8 @@ What pains us most is remembering the struggles and suffering you endured before
 There were days your body was evidently weak, yet your spirit remained strong. There were moments of pain you tried to hide behind a smile just to prevent us from worrying. Watching you go through those difficult times was heartbreaking for us as your children. We prayed, hoped, and wished for your full recovery, believing we would still have more time with you. But God, in His infinite wisdom, called you home.
 
 Daddy, you taught us resilience not through words alone, but through the life you lived. You showed us how to endure hardship with dignity, how to remain humble in difficult times, and how to stand strong even when life becomes unfair.
+
+Papa used to tell us, "Animals are reared, humans are trained." He took that philosophy to heart, training us thoroughly with deep discipline, principle, and love. That training is what has shaped us into who we are today, and it is a gift we will pass down through our own generations.
 
 As Nana Okru-Baah V, many saw your leadership and strength, but we had the privilege of knowing the loving, caring, and selfless man behind the title. You carried the responsibilities of family and community with honor. You gave without expecting anything in return. You supported many people quietly, wiped away the tears of others while hiding your own pain, and continued to sacrifice even when you were tired.
 
