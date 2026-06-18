@@ -76,7 +76,8 @@ May the Almighty God keep you in the bosom of Abraham. Fare thee well.`,
 // ─── Children's Tribute ───────────────────────────────────────────────────────
 export const childrenTribute = {
   title: 'Tribute by the Children',
-  subtitle: 'In Loving Memory of Nana Okru-Baah V',
+  subtitle: 'Proverbs 10:7',
+  scripture: 'The memory of the just is blessed, ...',
   signoff: 'From Your Loving Children',
   children: [
     'Harriet Aidoo-Rockson',
