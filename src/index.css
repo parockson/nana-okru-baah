@@ -1791,6 +1791,52 @@ img { display: block; width: 100%; height: auto; }
   font-family: var(--font-body);
   overflow: hidden;
   page-break-inside: avoid;
+  position: relative;
+}
+
+/* Watermark image — centered, faded, non-interactive */
+.bs-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  opacity: 0.07;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* All direct children of .bs-body should stack above the watermark */
+.bs-body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* TOC sheet watermark */
+.a5-sheet.toc-sheet {
+  position: relative;
+}
+
+.toc-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  opacity: 0.07;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.a5-sheet.toc-sheet > .bp-column {
+  position: relative;
+  z-index: 1;
 }
 
 /* Section header bar */
@@ -1827,6 +1873,63 @@ img { display: block; width: 100%; height: auto; }
 
 .bs-body {
   padding: 1.5rem;
+}
+
+/* =============================================
+   ORDER OF SERVICE — SECTION LIST
+   ============================================= */
+.bp-oos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.bp-oos-entry {
+  display: flex;
+  flex-direction: column;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(139, 33, 33, 0.1);
+  gap: 0.25rem;
+}
+
+.bp-oos-entry:last-child {
+  border-bottom: none;
+}
+
+.bp-oos-section {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2a1810;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.bp-oos-items {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+}
+
+.bp-oos-item {
+  font-size: 0.82rem;
+  color: #5c3a10;
+  font-style: italic;
+  line-height: 1.45;
+  padding-left: 0.75rem;
+  position: relative;
+}
+
+.bp-oos-item::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  font-size: 0.42rem;
+  top: 0.35em;
+  color: #cc3333;
 }
 
 /* =============================================

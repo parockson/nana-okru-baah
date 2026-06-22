@@ -13,16 +13,121 @@ export const cover = {
 
 // ─── Order of Service Timeline ───────────────────────────────────────────────
 export const orderOfService = [
-  { time: '8:30 AM',  title: 'Gathering & Reception of Mourners',       presenter: 'Ushers' },
-  { time: '9:00 AM',  title: 'Opening Prayer & Processional Hymn',      presenter: 'Rev. Isaac Mensah' },
-  { time: '9:30 AM',  title: 'Scripture Reading',                       presenter: 'Family Representative' },
-  { time: '10:00 AM', title: 'Tributes & Eulogies',                     presenter: 'Children, Nananom & Friends' },
-  { time: '11:00 AM', title: 'Sermon / Homily',                         presenter: 'Pastor Emmanuel' },
-  { time: '11:45 AM', title: 'Thanksgiving Offering',                   presenter: 'Finance Committee' },
-  { time: '12:00 PM', title: 'Vote of Thanks',                          presenter: 'Family Head' },
-  { time: '12:15 PM', title: 'Final Commendation & Benediction',        presenter: 'Chiefs & Elders Council' },
-  { time: '1:00 PM',  title: 'Interment at Achiase Family Cemetery',    presenter: '' },
-  { time: '3:00 PM',  title: 'Reception at Achiase Palace Grounds',     presenter: '' },
+  {
+    section: 'Arrival of Guests',
+    items: [
+      { title: 'Musical Prelude' },
+      { title: 'Seating of Guests' },
+    ],
+  },
+  {
+    section: 'Arrival of Traditional Authorities',
+    items: [
+      { title: 'Arrival of Chiefs and Queen Mothers' },
+      { title: 'Arrival of Family Heads and Elders' },
+      { title: 'Reception of Invited Dignitaries' },
+    ],
+  },
+  {
+    section: 'Filing Past',
+    items: [
+      { title: 'Viewing of the Mortal Remains' },
+    ],
+  },
+  {
+    section: 'Processional Hymn',
+    items: [],
+  },
+  {
+    section: 'Opening Prayer',
+    items: [],
+  },
+  {
+    section: 'Welcome Address',
+    items: [
+      { title: 'By the Master of Ceremonies' },
+    ],
+  },
+  {
+    section: 'Introduction of Officiating Ministers',
+    items: [],
+  },
+  {
+    section: 'Scripture Readings',
+    items: [
+      { title: 'Old Testament Reading' },
+      { title: 'New Testament Reading' },
+    ],
+  },
+  {
+    section: 'Congregational Hymn',
+    items: [],
+  },
+  {
+    section: 'Biography of the Late',
+    items: [
+      { title: 'Read by a Family Representative' },
+    ],
+  },
+  {
+    section: 'Tributes',
+    items: [
+      { title: 'Tribute by the Wife' },
+      { title: 'Tribute by the Children' },
+      { title: 'Tribute by Grandchildren' },
+      { title: 'Tribute by the Family' },
+      { title: 'Tribute by the Chiefs and People of Gomoa Achiase' },
+    ],
+  },
+  {
+    section: 'Special Musical Ministration',
+    items: [],
+  },
+  {
+    section: 'Sermon / Message of Hope',
+    items: [],
+  },
+  {
+    section: 'Prayer for the Children & Family',
+    items: [],
+  },
+  {
+    section: 'Offertory',
+    items: [
+      { title: 'Collection of Offering' },
+      { title: 'Thanksgiving Song' },
+    ],
+  },
+  {
+    section: 'Funeral Announcements',
+    items: [],
+  },
+  {
+    section: 'Final Viewing',
+    items: [],
+  },
+  {
+    section: 'Farewell Hymn',
+    items: [],
+  },
+  {
+    section: 'Benediction',
+    items: [],
+  },
+  {
+    section: 'Recessional',
+    items: [],
+  },
+  {
+    section: 'Procession to the Cemetery',
+    items: [],
+  },
+  {
+    section: 'Interment',
+    items: [
+      { title: 'Interment at the Family Cemetery, Gomoa Achiase' },
+    ],
+  },
 ];
 
 // ─── Biography Narrative ─────────────────────────────────────────────────────
@@ -182,6 +287,33 @@ On behalf of all your in-laws, we express our heartfelt gratitude for the privil
 
 Though we mourn his passing, we hold firmly to the promise of our Lord Jesus Christ in John 11:25: "I am the resurrection and the life; he who believes in Me, though he may die, yet shall he live."
 May his memory remain blessed among us, and may his soul rest in perfect peace until the resurrection morning. Amen`,
+};
+
+// ─── Family Tribute ───────────────────────────────────────────────────────────
+export const familyTribute = {
+  title: 'Tribute by the Family',
+  subtitle: 'Psalm 112:6',
+  scripture: 'Surely the righteous will never be shaken; they will be remembered forever.',
+  signoff: 'The Aidoo-Rockson Family',
+  body: `The Aidoo-Rockson family, together with the royal family of Gomoa Achiase, rises with one voice — a voice shaken by grief yet strengthened by gratitude — to honour our patriarch, our anchor, and our pride: Nana Okru-Baah V, known in private life as Felix Aidoo-Rockson.
+
+Nana was born into a family that valued dignity above all things, and from his earliest days, he carried that dignity like a crown. He grew from a disciplined young man in Gomoa Achiase into a respected professional at Total Ghana, and ultimately into the Odikro who would define an era for our town. Through every transition, the core of who he was never changed — he remained humble, principled, generous, and deeply, irreversibly in love with his people.
+
+As a family, we did not always see him in the robes of a chief. More often, we saw him in quieter moments — settling a quarrel between siblings with a patience that seemed infinite, providing for a nephew who had fallen on hard times without any need for fanfare, waking before everyone else to tend to matters that he felt were his responsibility alone. He never made his sacrifices a topic of conversation. He simply sacrificed.
+
+He was a man who held the family together not by force but by example. When he spoke, the room grew still — not from fear, but from respect. His counsel was not law imposed from above; it was wisdom offered with love. He taught us that a man of honour does not need to shout to be heard, and he lived that truth every single day.
+
+The stool of Gomoa Achiase found a worthy occupant in Nana. Under his reign, the family's name was never brought into disrepute. He upheld the customs of our ancestors while also embracing progress for the next generation. He walked between two worlds with grace — the world of tradition and the world of the present — and he made both richer for his presence.
+
+We, the family, are not without sorrow today. His absence is a wound that will take a long time to heal. We miss his voice on family calls, his firm handshake at gatherings, his quiet prayer before every meal, and the way he would look at all of us assembled together with a satisfaction that said: this is enough. This is everything.
+
+But grief does not diminish what he built. If anything, it illuminates it. The values he instilled — hard work, unity, forgiveness, and faith — are alive in each of us. His legacy does not end at the graveside. It continues in every child who carries his name, every grandchild who embodies his character, and every community member whose life was made better by knowing him.
+
+Nana Okru-Baah V, our father, our chief, our elder — you gave us more than we can ever repay. You made the Aidoo-Rockson name a name worth carrying. We will carry it with honour.
+
+Rest in the bosom of the Almighty, Nana. Your family will be alright. You raised us well.
+
+Daa yie, Opanyin pa. Daa yie.`,
 };
 
 // ─── Weekend Program Outline ──────────────────────────────────────────────────

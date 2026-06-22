@@ -8,11 +8,13 @@ import {
   grandchildrenTribute,
   greatGrandchildrenTribute,
   inlawsTribute,
+  familyTribute,
   programOutline,
   momoSupport,
 } from '../../data/brochureContent.js';
 import portraitImg from '../../assets/main page/portrait.png';
 import supportImg from '../../assets/main page/support.jpeg';
+import watermarkImg from '../../assets/main page/water mark.jpeg';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Vite glob imports – resolved cleanly at build-time using modern specs
@@ -87,9 +89,9 @@ const TOC_ITEMS = [
     id: 'inlaws-tribute', label: 'Tribute from In-Laws',
     sub: [{ id: 'inlaws-photos', label: 'Pictures of In-Laws' }],
   },
+  { id: 'family-tribute', label: 'Tribute from the Family' },
   { id: 'gallery',         label: 'Gallery — Nana Okru Baah' },
   { id: 'momo-support',   label: 'Donations and Contributions' },
-  { id: 'program-outline', label: 'Program Outline' },
 ];
 
 const scrollTo = (id) =>
@@ -99,10 +101,18 @@ const scrollTo = (id) =>
    Reusable primitives
    ───────────────────────────────────────────────────────────────────────────── */
 
-/** Section card with crimson header bar */
-function BrochureSection({ id, label, number, children }) {
+/** Section card with crimson header bar and watermark */
+function BrochureSection({ id, label, number, children, watermark = true }) {
   return (
     <section className="brochure-section" id={id}>
+      {watermark && (
+        <img
+          src={watermarkImg}
+          aria-hidden="true"
+          className="bs-watermark"
+          alt=""
+        />
+      )}
       <div className="bs-header">
         <span className="bs-number">{number}</span>
         <h2 className="bs-title">{label}</h2>
@@ -196,6 +206,7 @@ function CoverPage() {
 function TocPage() {
   return (
     <div className="a5-sheet toc-sheet" id="table-of-contents">
+      <img src={watermarkImg} aria-hidden="true" className="toc-watermark" alt="" />
       <div className="bp-column bp-column--toc">
         <h3 className="bp-section-title">Table of Contents</h3>
         <nav aria-label="Brochure contents" className="toc-list">
@@ -243,16 +254,17 @@ export function BrochureBooklet() {
 
       {/* ── I. Order of Service ────────────────────────────────────────────── */}
       <BrochureSection id="order-of-service" label="Order of Service" number="I">
-        <div className="bp-timeline">
-          {orderOfService.map((item, i) => (
-            <div key={i} className="bp-timeline-row">
-              <span className="bp-timeline-time">{item.time}</span>
-              <div className="bp-timeline-content">
-                <span className="bp-timeline-title">{item.title}</span>
-                {item.presenter && (
-                  <span className="bp-timeline-presenter">{item.presenter}</span>
-                )}
-              </div>
+        <div className="bp-oos-list">
+          {orderOfService.map((entry, i) => (
+            <div key={i} className="bp-oos-entry">
+              <p className="bp-oos-section">{entry.section}</p>
+              {entry.items && entry.items.length > 0 && (
+                <ul className="bp-oos-items">
+                  {entry.items.map((item, j) => (
+                    <li key={j} className="bp-oos-item">{item.title}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
@@ -363,17 +375,26 @@ export function BrochureBooklet() {
         <PhotoGrid photos={inlawsPhotos} />
       </BrochureSection>
 
-      {/* ── VIII. Gallery ──────────────────────────────────────────────────── */}
+      {/* ── VIII. Tribute from the Family ──────────────────────────────────── */}
+      <BrochureSection
+        id="family-tribute"
+        label={familyTribute.title}
+        number="VIII"
+      >
+        <TributeText tribute={familyTribute} />
+      </BrochureSection>
+
+      {/* ── IX. Gallery ──────────────────────────────────────────────────── */}
       <BrochureSection
         id="gallery"
         label="Gallery — Nana Okru Baah"
-        number="VIII"
+        number="IX"
       >
         <PhotoGrid photos={galleryPhotos} />
       </BrochureSection>
 
       {/* ── IX. MoMo Support — Image + Link Only ──────────────────────────── */}
-      <BrochureSection id="momo-support" label={momoSupport.heading} number="IX">
+      <BrochureSection id="momo-support" label={momoSupport.heading} number="X">
         <div className="momo-simple">
           <a
             href="https://korbapay.korba365.com/payments/institution/628?branch"
@@ -396,29 +417,6 @@ export function BrochureBooklet() {
           >
             Click Here to Send Support →
           </a>
-        </div>
-      </BrochureSection>
-
-      {/* ── X. Program Outline ────────────────────────────────────────────── */}
-      <BrochureSection
-        id="program-outline"
-        label="Program Outline"
-        number="X"
-      >
-        <div className="program-grid">
-          {programOutline.map((day, di) => (
-            <div key={di} className="program-day">
-              <h3 className="program-day-title">{day.day}</h3>
-              <div className="program-events">
-                {day.events.map((ev, ei) => (
-                  <div key={ei} className="program-event">
-                    <span className="program-time">{ev.time}</span>
-                    <span className="program-desc">{ev.desc}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
         </div>
       </BrochureSection>
 
