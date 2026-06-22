@@ -1,13 +1,12 @@
-import React, { useRef, useState } from 'react';
-import html2pdf from 'html2pdf.js';
+import React, { useState } from 'react';
 import PageShell from './components/PageShell.jsx';
 import { BrochureBooklet } from './components/brochure/BrochurePageContent.jsx';
 import firstImage from './assets/main page/first image.png';
+import brochurePDF from './utils/Brochure.pdf?url';
 
 function App() {
   const [splashClosing, setSplashClosing] = useState(false);
   const [splashGone,    setSplashGone]    = useState(false);
-  const bookletRef = useRef(null);
 
   const closeSplash = () => {
     setSplashClosing(true);
@@ -15,20 +14,12 @@ function App() {
   };
 
   const handleDownloadPDF = () => {
-    const element = bookletRef.current;
-    if (!element) return;
-    element.classList.add('is-printing');
-    html2pdf()
-      .from(element)
-      .set({
-        margin: 0,
-        filename: 'Nana_Okru-Baah_V_Memorial_Brochure.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, letterRendering: true },
-        jsPDF: { unit: 'mm', format: 'a5', orientation: 'portrait' },
-      })
-      .save()
-      .then(() => element.classList.remove('is-printing'));
+    const link = document.createElement('a');
+    link.href = brochurePDF;
+    link.download = 'Nana_Okru-Baah_V_Memorial_Brochure.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -98,7 +89,7 @@ function App() {
             subtitle="Nana Okru-Baah V · Odikro of Gomoa Achiase"
             compact
           >
-            <div className="booklet-scroll-frame" ref={bookletRef}>
+            <div className="booklet-scroll-frame">
               <BrochureBooklet />
             </div>
           </PageShell>
